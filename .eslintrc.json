@@ -1,26 +1,27 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true
+        "browser": true, // 指定环境为浏览器
+        "es2021": true   // 启用 ES2021 特性
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "eslint:recommended", // 使用 ESLint 推荐的规则
+        "plugin:react/recommended", // 使用 React 推荐的规则
+        "plugin:@typescript-eslint/recommended" // 使用 TypeScript 推荐的规则
     ],
     "overrides": [
     ],
-    "parser": "@typescript-eslint/parser",
+    "parser": "@typescript-eslint/parser", // 使用 TypeScript 解析器
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        "ecmaVersion": "latest", // 使用最新的 ECMAScript 版本
+        "sourceType": "module"  // 使用模块类型的代码
     },
     "plugins": [
-        "react",
-        "@typescript-eslint"
+        "node", // 启用 Node.js 相关规则
+        "react", // 启用 React 相关规则
+        "@typescript-eslint" // 启用 TypeScript 相关规则
     ],
     "rules": {
-        "@typescript-eslint/no-empty-interface": "warn",
-        "react/no-unescaped-entities":"warn"
+        "@typescript-eslint/no-empty-interface": "warn", // TypeScript 中禁止空接口，并给出警告
+        "react/no-unescaped-entities": "warn" // 禁止未转义的特殊字符在 React 组件中，给出警告
     }
 }
